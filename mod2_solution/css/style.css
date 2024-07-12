@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: Nunito;
+}
+
+#title{
+    margin: 0;
+    padding: auto;
+    text-align: center; 
+    margin: auto;
+    
+}
+
+#title p{
+    font-size: 50px;
+    color: black;
+
+}
+
+/* inside the box */
+
+.para{
+    color: black;
+    display: flex;
+    padding: 5px 5px 5px 5px;
+}
+
+b{
+    color: black;
+
+
+}
+
+.titlebox1{
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
+    background-color: rgb(211, 151, 151);
+    margin-left: auto;
+
+}
+
+.titlebox2{
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
+    background-color: rgb(191, 68, 66);
+    margin-left: auto;
+}
+
+.titlebox3{
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
+    background-color: rgb(227, 207, 151);
+    margin-left: auto;
+}
+
+
+.content_box{
+
+    background: gray;
+    border: 2px solid black;
+}
+
+.content_box3{
+
+    background: gray;
+    border: 2px solid black;
+}
+
+#content{
+    margin: 50px;
+    display:grid;
+    grid-template-columns: [first] auto [line2] auto [line3] auto [end];
+    grid-template-rows: [row1-start] auto [row1-end];
+    /* background-color: aquamarine; */
+    grid-column-gap: 40px;
+}
+
+
+
+
+/* media size of between 768px and 991px, inclusively */
+
+@media (min-width: 768px) and (max-width: 991px){
+
+    /* inside the box */
+
+
+    .titlebox3{
+        border-bottom: 2px solid black;
+        border-left: 2px solid black;
+        padding: 5px;
+        width: 150px;
+        text-align: center;
+        background-color: rgb(227, 207, 151);
+        margin-left: auto;
+    }
+
+
+    #content{
+        margin: 50px;
+        display:grid;
+        grid-template-columns: [first] auto [line2] auto [end];
+        grid-template-rows: [row1-start] auto [row1-end] auto [last-line];
+        /* background-color: aquamarine; */
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+    }
+
+    .content_box3{
+
+        background: gray;
+        border: 2px solid black;
+        min-height: 170px;
+        
+
+        grid-column-start: first;
+        grid-column-end: end;
+        grid-row-start: row1-end;
+        grid-row-end: last-line;
+    }
+
+    .content_box{
+
+        background: gray;
+        border: 2px solid black;
+        min-height: 170px;
+        min-width: auto;
+    }
+
+
+}
+
+
+
+
+
+
+/* media size of equal to or less than 767px */
+
+@media (width <= 767px){
+
+    #content{
+        margin: 50px;
+        display:grid;
+        grid-template-columns: [first] auto [end];
+        grid-template-rows: [row1-start] auto [row1-end] auto [third-line] auto [last-line];
+        /* background-color: aquamarine; */
+        grid-row-gap: 30px;
+    }
+
+
+
+}
+
+
